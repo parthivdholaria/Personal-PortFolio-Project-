@@ -1,0 +1,191 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "poppins", sans-serif;
+}
+
+/* home page */
+
+.container-nav {
+	height: 100vh;
+	width: 100%;
+
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+		url(Images/bg2.jfif);
+	background-size: cover;
+	background-position: center;
+	padding: 0.8;
+	position: relative;
+}
+
+.container-social {
+	height: 100vh;
+	width: 100%;
+
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+		url(Images/bg1.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 0.8;
+	position: absolute;
+	top: 1500px;
+}
+
+/* navbar */
+
+nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5px 5px;
+}
+
+nav ul {
+	flex: 1;
+	text-align: right;
+	padding-right: 30px;
+}
+
+nav ul li {
+	color: white;
+	list-style: none;
+	display: inline-block;
+	margin: 10px 30px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	position: relative;
+	cursor: pointer;
+	color: white;
+}
+
+nav ul li a::after {
+	background-color: white;
+	content: "";
+	height: 10%;
+	width: 0px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+	width: 50%;
+	cursor: pointer;
+}
+
+nav img {
+	border-radius: 250px;
+	border-color: white;
+	border-width: 15px;
+	height: 100px;
+	width: 100px;
+	padding-left: 10px;
+}
+
+/* Introduction-homepage */
+
+#intro {
+	color: #fff;
+	position: absolute;
+	top: 200px;
+	left: 65px;
+	font-family: "Merriweather", serif;
+}
+
+#intro p {
+	font-size: 75px;
+	font-weight: 600;
+}
+
+#intro h1 {
+	font-size: 100px;
+	font-weight: 700;
+	/* margin-left: -10px; */
+	line-height: 160px;
+
+	/* to make the background dissapear */
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+
+	/* to add animation to the text we placed an image on its back */
+	background: url("Images/back.png");
+	background-position: 0 0;
+	-webkit-background-clip: text;
+	animation: back 20s linear infinite;
+}
+
+@keyframes back {
+	100% {
+		background-position: 2000px 0;
+	}
+}
+
+#intro h3 {
+	font-size: 50px;
+	font-weight: 500;
+}
+
+#intro #profile {
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border: 10px solid white;
+	top: 10px;
+	left: 1000px;
+	border-radius: 50%;
+	background-blend-mode: lighten;
+}
+
+#intro .other a {
+	display: inline-block;
+	margin: 40px 10px;
+	box-sizing: border-box;
+}
+
+#intro .other a {
+	text-decoration: none;
+	color: white;
+	border: 2px solid white;
+	padding: 10px 10px;
+}
+
+#intro .other #leetcode:hover {
+	background-color: orange;
+}
+
+#intro .other #codeforces:hover {
+	background-color: rgb(129, 172, 228);
+}
+
+#intro .other #gfg:hover {
+	background-color: rgb(78, 190, 102);
+}
+
+#intro .other span {
+	padding: 10px 10px;
+	font-weight: 100;
+}
+
+/* skills section */
+
+.projects {
+	padding: 50px 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.projects #project-heading {
+	color: blue;
+}
+
+.projects .box {
+	border: 2px solid red;
+	height: 50px;
+	width: 50px;
+}
